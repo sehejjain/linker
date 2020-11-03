@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="home" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linker</title>
+
+    <link href="index.css" type = "text/css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+    <div style="background: #353a40;">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom">
+		<a class="navbar-brand" href="/"><span class="brand">LINKER</span></a>
+		<ul class="navbar-nav ml-auto mt-2">
+				<li class="nav-item"><a href="profile.php">Profile</a></li>
+				<li> </li>
+		</ul>
+    </nav>
+ 
+
+</div>
+
+<table class = "tab" border=0>
+    <td>
+        <button id="lb">Login</button>
+    </td>
+    <td>
+        <button id="sb">Signup</button>
+    </td>
+</table>
+<div class="container">
+    <div class = "login" id = "l">
+		<center>
+		<iframe src="loginform.html" width="650" height="400" frameBorder="0"></iframe></center>
+    </div></div>
+    
+    <div class="container">
+            <div class = "signup" id="s">
+                <center>
+                <iframe src="signup.html" width="650" height="400" frameBorder="0"></iframe></center>
+            </div></div>
+
+	
+	<div style = "padding : 10px" class="fixed-footer">
+        Copyright &copy; 2019 Linker
+     
+                <span style="float: right" class="nav-item"><a href="#">About Us</a></span>
+     </div>
+
+
+
+
+<script>
+
+document.getElementById("lb").addEventListener("click", function () {
+    document.getElementById("l").classList.add("show-f")
+    document.getElementById("l").classList.remove("login")
+    
+});
+
+document.getElementById("sb").addEventListener("click", function () {
+    document.getElementById("s").classList.add("show-f")
+    document.getElementById("s").classList.remove("signup")
+    
+});
+
+
+
+
+</script>
+
+
+</body>
+
+</html>
+
+

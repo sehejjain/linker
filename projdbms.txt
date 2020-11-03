@@ -1,0 +1,17 @@
+
+create table login(
+    pwd varchar(100)not null,
+    email varchar(100),
+    roll integer not null,
+    primary key(roll)
+    );
+
+create table prof(
+    roll integer not null,
+    hostel varchar(20) not null,
+    room varchar(10) not null,
+    mobile integer ,
+    countq integer,
+    primary key(roll),
+    foreign key(roll)references login(roll)
+    );

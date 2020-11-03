@@ -1,0 +1,90 @@
+create table questions_roll
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    question varchar(200) not null,
+    dateq datetime default CURRENT_TIMESTAMP,
+    counta integer default 0,
+	upvoteq integer default 0,
+    downvoteq integer default 0,
+    foreign key (roll) REFERENCES prof(roll),
+    primary key (idq)
+);
+    
+	
+	create table answers_roll
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    ida varchar(100) not null,
+    answer varchar(200) not null,
+    datea datetime default CURRENT_TIMESTAMP,
+    -- upvotea integer default 0,
+    -- downvotea integer default 0,
+    foreign key (roll) REFERENCES prof(roll),
+    primary key (idq,ida),
+    foreign key (idq) REFERENCES questions_roll(qid)
+);
+    
+	
+	create table questions_all
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    question varchar(200) not null,
+    dateq datetime default CURRENT_TIMESTAMP,
+    counta integer default 0,
+	upvoteq integer default 0,
+    downvoteq integer default 0,
+    foreign key (roll) REFERENCES prof(roll),
+    primary key (idq)
+);
+    
+	
+	create table answers_all
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    ida varchar(100) not null,
+    answer varchar(200) not null,
+    datea datetime default CURRENT_TIMESTAMP,
+    upvotea integer default 0,
+    downvotea integer default 0,
+    foreign key (roll) REFERENCES prof(roll),
+    primary key (idq,ida),
+    foreign key (idq) REFERENCES questions_roll(qid)
+);
+    
+	create table upvotea
+(
+    roll integer not null,
+    ida varchar(100) not null,
+    primary key (ida,roll),
+    foreign key (roll) REFERENCES prof(roll),
+    foreign key (ida) REFERENCES answers_all(aid)
+);
+create table upvoteq
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    primary key (idq,roll),
+    foreign key (roll) REFERENCES prof(roll),
+    foreign key (idq) REFERENCES questions_all(idq)
+);
+create table downvotea
+(
+    roll integer not null,
+    ida varchar(100) not null,
+    primary key (ida,roll),
+    foreign key (roll) REFERENCES prof(roll),
+    foreign key (ida) REFERENCES answers_all(aid)
+);
+create table downvoteq
+(
+    roll integer not null,
+    idq varchar(100) not null,
+    primary key (idq,roll),
+    foreign key (roll) REFERENCES prof(roll),
+    foreign key (idq) REFERENCES questions_all(idq)
+);
+	

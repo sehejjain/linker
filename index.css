@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+body, html {
+  font-family: "Montserrat";
+  margin: 0;
+  height: 100%;
+}
+body a, html a {
+  text-decoration: none;
+  color: gray;
+}
+
+nav .brand {
+  font-family: "Montserrat Subrayada";
+  font-size: 2em;
+}
+
+.fixed-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #353a40;
+  color: white;
+}
+
+.newqform {
+  display: none;
+}
+.newqform input[type=submit] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.newqform input[type=submit]:hover {
+  background: #2ecc71;
+  color: white;
+}
+
+.question {
+  color: white;
+  height: 200%;
+  cursor: pointer;
+  font-style: bold;
+  font-size: 50px;
+  text-align: right;
+}
+
+.show-f {
+  display: block;
+}
+
+.qs {
+  padding-top: 10px;
+}
+
+.login {
+  display: none;
+}
+
+.signup {
+  display: none;
+}
+
+.tab {
+  width: 100%;
+  text-align: center;
+}
+.tab td {
+  padding: 10px;
+}
+.tab td button {
+  border: 10;
+  border-color: black;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.tab td button:hover {
+  background: #2ecc71;
+  border: 0;
+  color: white;
+}
+
+/*# sourceMappingURL=index.css.map */

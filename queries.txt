@@ -1,0 +1,17 @@
+//to check all questions
+select idq
+from questions_all
+order by dateq DESC
+
+//to get previous questions
+select question
+from questions_all
+order by dateq DESC
+
+//to insert new question
+INSERT INTO `questions_all`(`roll`, `idq`, `question`, `dateq`, `counta`) 
+VALUES ($roll,'$idq','$question',DEFAULT,DEFAULT)
+
+//to insert into questions_roll
+INSERT INTO `questions_2018313`(`roll`, `idq`, `question`, `dateq`, `counta`)
+VALUES ([value-1],[value-2],[value-3],[value-4],[value-5])
