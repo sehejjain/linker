@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="home" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Linker</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<link href="index.css" type = "text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<a class="navbar-brand" href="/"><span class="brand">LINKER</span></a>
+		<ul class="navbar-nav ml-auto mt-2">
+				<li class="nav-item"><a href="profile.php">Profile</a></li>
+				<li> </li>
+				<li class="nav-item"><a href="#">About Us</a></li>
+		</ul>
+	</nav>
+
+	<div class="container">
+		<form action="submitQuestion.php" method="post">
+			Ask a new Question: <br><textarea rows = "5" cols = "50"
+				name = "newquestion"></textarea><br>
+			 <input type="submit" value="Submit" />
+		</form>
+		<iframe src="displayQuestions.php" width="650" height="400"></iframe>
+	</div>
+	
+	<div class="fixed-footer">
+        <div class="container">Copyright &copy; 2019 Linker</div>        
+    </div>
+</body>
+
+</html>
+
